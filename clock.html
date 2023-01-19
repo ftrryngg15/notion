@@ -6,15 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="https://ftrryngg15.github.io/notion/clock.js" async>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+    <script src="jquery.fittext.js"></script>
+    <script>
+        function update() {
+            $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
+        }
+
+        setInterval(update, 1000);
     </script>
+
 </head>
 
 <style>
     body {
         font-family: 'liquid_crystalregular', sans-serif;
         user-select: none;
-        user-drag: none;
+
     }
 
     .clock {
@@ -34,6 +45,12 @@
 
 <body>
     <div id="clock" class="clock">loading ...</div>
+    <script type="text/javascript">
+        $('#clock').fitText(1.3);
+    </script>
+
 </body>
+
+
 </html>
   
