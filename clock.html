@@ -1,15 +1,36 @@
-<link rel=¨stylesheet¨ type=¨text/css¨ href="https://ftrryngg15.github.io/notion/clock.css¨>
-<script src="https://ftrryngg15.github.io/notion/clock.js"></script>
-<body onLoad="initClock()">
+<style>
+  body {
+  font-family: 'liquid_crystalregular', sans-serif;
+  user-select: none;
+  user-drag: none;
+}
+
+.clock {
+  height: 100px;
+  width: 70%;
+  line-height: 100px;  
+  margin: 150px auto 0;
+  padding: 0 50px;
+  background: #222;
+  color: #eee;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 7px #222;
+  text-shadow: 0 0 3px #fff;
+}
+
+</style>  
 
 
-  <div id="timedate">
-    <a id="mon">January</a>
-    <a id="d">1</a>,
-    <a id="y">0</a><br />
-    <a id="h">12</a> :
-    <a id="m">00</a>:
-    <a id="s">00</a>
-  </div>
+<div id="clock" class="clock">loading ...</div>
+<script>
+$('#clock').fitText(1.3);
+
+function update() {
+  $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
+}
+
+setInterval(update, 1000);
+</script>
 
   
